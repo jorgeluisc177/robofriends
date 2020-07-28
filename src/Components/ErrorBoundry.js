@@ -5,7 +5,7 @@ class ErrorBoundry extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			hasError: false;
+			hasError: false,
 		}
 	}
 	// componentDidCatch es como un try catch de JS, en caso de que haya algun error entonces se ejecuta
@@ -18,12 +18,11 @@ class ErrorBoundry extends Component {
 	// si no simplemente que nos retorne props.children y como el children es CardList entonces nos devuelve
 	// las props de CardList.
 	render(){
-		return (
-			if (this.state.hasError){
-				return <h1> Ups! that is not good...</h1>
-			}
-			return this.props.children
-		)
+		return this.state.hasError ?
+			<h1> Ups! that is not good...</h1>
+			:
+		 this.props.children
+		
 	}
 };
 

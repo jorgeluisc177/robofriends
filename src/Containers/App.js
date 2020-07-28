@@ -94,7 +94,7 @@ class App extends Component{
 				<Scroll>
 					<ErrorBoundry>
 						<CardList robots = {robotsFiltrados} />
-					<ErrorBoundry/>
+					</ErrorBoundry>
 				</Scroll>
 			</div>
 		);		
